@@ -207,4 +207,10 @@ mod tests {
         assert!(eqty!(u32; 1.0, 1.0));
         assert!(eqty!(u32; 1.0, 1.0, 1.0, 1.0, 1.0));
     }
+
+    #[test]
+    fn readme() {
+        assert!(le!(1, 3, 4));
+        assert!(lety!(i32; -2.0, -1, 3, 4, 5.0));
+    }
 }
