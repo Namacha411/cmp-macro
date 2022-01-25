@@ -5,7 +5,7 @@ This macro allows you to write a summary comparison, just like in Python.
 ## example
 
 ```rs
-use cmp_macro::le, lety;
+use cmp_macro::{le, lety};
 
 fn main() {
     let x = 3;
