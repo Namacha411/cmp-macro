@@ -154,7 +154,7 @@ macro_rules! eq {
     }
 }
 
-/// equal
+/// equal with type cast
 ///
 /// # Example
 /// 
