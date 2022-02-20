@@ -1,8 +1,11 @@
 [package]
 name = "cmp_macro"
 version = "0.1.0"
+authores = ["namacha <thdyk.4.11@gmail.com>"]
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+licence = "MIT OR Apache-2.0"
+description = "This macro allows you to write a summary comparison, just like in Python."
+repository = "https://github.com/Namacha411/cmp-macro"
+readme = "README.md"
 
 [dependencies]
