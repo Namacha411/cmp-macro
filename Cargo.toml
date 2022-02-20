@@ -6,6 +6,7 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 description = "This macro allows you to write a summary comparison, just like in Python."
 repository = "https://github.com/Namacha411/cmp-macro"
+documentation = "https://docs.rs/cmp_macro"
 readme = "README.md"
 
 [dependencies]

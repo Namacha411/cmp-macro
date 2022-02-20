@@ -1,10 +1,10 @@
-# cmp-macro
+# Cmp-macro
 
 This macro allows you to write a summary comparison, just like in Python.
 
-## example
+## Example
 
-```rs
+```rust
 use cmp_macro::{le, lety};
 
 fn main() {
