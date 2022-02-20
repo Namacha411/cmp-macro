@@ -1,3 +1,13 @@
+//! # cmp_macro
+//! This macro allows you to write a summary comparison, just like in Python.
+
+/// less than
+///
+/// # Example
+/// 
+/// ```
+/// assert!(lt!(1, 2, 3, 4, 5));
+/// ```
 #[macro_export]
 macro_rules! lt {
     ($lhs:expr, $rhs:expr, $( $args:expr ),+) => {
@@ -8,6 +18,13 @@ macro_rules! lt {
     }
 }
 
+/// less than with type cast
+///
+/// # Example
+/// 
+/// ```
+/// assert!(ltty!(u32; 1.0, 2, 3.0, 4, 5.0));
+/// ```
 #[macro_export]
 macro_rules! ltty {
     ($t:ty; $lhs:expr, $rhs:expr, $( $args:expr ),+) => {
@@ -18,6 +35,13 @@ macro_rules! ltty {
     }
 }
 
+/// less than or equal
+///
+/// # Example
+/// 
+/// ```
+/// assert!(le!(1, 2, 3, 4, 4));
+/// ```
 #[macro_export]
 macro_rules! le {
     ($lhs:expr, $rhs:expr, $( $args:expr ),+) => {
@@ -28,6 +52,13 @@ macro_rules! le {
     }
 }
 
+/// less than or equal with type cast
+///
+/// # Example
+/// 
+/// ```
+/// assert!(lety!(u32; 1.0, 2, 3.0, 4, 4));
+/// ```
 #[macro_export]
 macro_rules! lety {
     ($t:ty; $lhs:expr, $rhs:expr, $( $args:expr ),+) => {
@@ -38,6 +69,13 @@ macro_rules! lety {
     }
 }
 
+/// greater than
+///
+/// # Example
+/// 
+/// ```
+/// assert!(gt!(5, 4, 3, 2, 1));
+/// ```
 #[macro_export]
 macro_rules! gt {
     ($lhs:expr, $rhs:expr, $( $args:expr ),+) => {
@@ -48,6 +86,13 @@ macro_rules! gt {
     }
 }
 
+/// greater than with type cast
+///
+/// # Example
+/// 
+/// ```
+/// assert!(gtty!(u32, 5.0, 4, 3.0, 2, 1.0));
+/// ```
 #[macro_export]
 macro_rules! gtty {
     ($t:ty; $lhs:expr, $rhs:expr, $( $args:expr ),+) => {
@@ -58,6 +103,13 @@ macro_rules! gtty {
     }
 }
 
+/// greater than or equal
+///
+/// # Example
+/// 
+/// ```
+/// assert!(ge!(5, 4, 3, 2, 2));
+/// ```
 #[macro_export]
 macro_rules! ge {
     ($lhs:expr, $rhs:expr, $( $args:expr ),+) => {
@@ -68,6 +120,13 @@ macro_rules! ge {
     }
 }
 
+/// greater than or equal with type cast
+///
+/// # Example
+/// 
+/// ```
+/// assert!(gety!(u32, 5, 4.0, 3, 2, 2));
+/// ```
 #[macro_export]
 macro_rules! gety {
     ($t:ty; $lhs:expr, $rhs:expr, $( $args:expr ),+) => {
@@ -78,6 +137,13 @@ macro_rules! gety {
     }
 }
 
+/// equal
+///
+/// # Example
+/// 
+/// ```
+/// assert!(eq!(1, 1, 1));
+/// ```
 #[macro_export]
 macro_rules! eq {
     ($lhs:expr, $rhs:expr, $( $args:expr ),+) => {
@@ -88,6 +154,13 @@ macro_rules! eq {
     }
 }
 
+/// equal
+///
+/// # Example
+/// 
+/// ```
+/// assert!(eq!(u32, 1u64, 1i32, 1u8));
+/// ```
 #[macro_export]
 macro_rules! eqty {
     ($t:ty; $lhs:expr, $rhs:expr, $( $args:expr ),+) => {
